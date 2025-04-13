@@ -325,7 +325,9 @@ while jogar == 1:
                         pos4 -= 1
                         # Determina que esse tipo de dica já foi dado
                         tipo4 = 2    
-            
+
+        # Verifica apenas o contador para exibir o código com dicas
+        if 5 <= cont <= 10:    
             # Exibe o código com a dica
             print('\n==> ', end='')
             # Posição 1
@@ -405,7 +407,7 @@ while jogar == 1:
     
     # Perguntar se o usuário deseja jogar novamente
     jogar = int(input('\nDeseja jogar novamente?\n[1] - SIM\n[0] - NÃO\n\n>> '))
-    while jogar not in [0, 1]:
+    while not (jogar == 1 or jogar == 0):
         jogar = int(input('\nOpção inválida\nDeseja jogar novamente?\n[1] - SIM\n[0] - NÃO\n\n>> '))  
 
 # Mensagem de encerramento
